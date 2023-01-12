@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <img src="svg/logo.svg" alt="">
+    </nav>
+
+    <section class="panel log-panel">
+        <h2>Logger</h2>
+        <form action="/logEntry" method="POST">
+            <fieldset class="attack-type">
+                <div class="type-migraine">
+                    <input class="radio-input" type="radio" id="migraine" name="attackType" value="migraine" checked>
+                    <label for="migraine">Migraine</label>
+                </div>
+                <div class="type-headache">
+                    <input class="radio-input" type="radio" id="headache" name="attackType" value="headache">
+                    <label for="headache">Headache</label>
+                </div>
+                <div class="type-other">
+                    <input class="radio-input" type="radio" id="other" name="attackType" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </fieldset>
+
+            <section class="notes">
+                <h3>Notes</h3>
+                <textarea id="notes-section" name="entryNotes" rows="4" cols="53" placeholder="Woke up in pain at 8am..."></textarea>
+            </section>
+
+            <div id="date-and-submit">
+                <section class="date">
+                    <input type="date" id="datepicker" name="entryDate">
+                </section>
+                <section class="submit-section">
+                    <input type="submit">
+                </section>
+            </div>
+
+        </form>
+    </section>
+
+
+    <section class="panel overview-panel">
+        <h2>Ninety Days</h2>
+        <span>Total Episodes:   | Total Migraines: </span>
+        <section class="timeline" id="id-timeline">
+            <% const blocks = helper.blkArr(info).reverse()%>
+            <% let aID = 1%>
+            <% blocks.forEach(function (arrayItem) { %>
+                <% let aType = arrayItem['attackType'] %>
+                <% let aDate = arrayItem['entryDate'] %>
+                <% let aNotes = arrayItem['entryNotes'] %>
+
+                <% if (aType === undefined) { %>
+                    <div class="blocks inActive-block"></div>
+
+                <%} else if (aType === 'migraine') { %>
+                    <div data-attack-type="<%= aType %>" data-attack-date="<%= aDate %>" data-attack-notes="<%= aNotes %>" class="blocks migraine-block"></div>
+
+                <%} else if (aType === 'headache'){ %>
+                    <div data-attack-type="<%= aType %>" data-attack-date="<%= aDate %>" data-attack-notes="<%= aNotes %>" class="blocks headache-block"></div>
+
+                <%} else if (aType === 'other'){ %>
+                    <div data-attack-type="<%= aType %>" data-attack-date="<%= aDate %>" data-attack-notes="<%= aNotes %>" class="blocks other-block"></div>
+                <%} else { %>
+                <% } %>
+                <% aID += 1%>
+            <% }); %>
+
+
+        </section>
+    </section>
+
+    <!-- POPUP -->
+    <div> 
+        <div id="outterDiv">
+            <div class="popup" id="popup2">
+                <div>
+                    <h3 class="details" id="details-date"></h3>
+                    <span href="#id-timeline" onclick="hidePopup()">•</span>
+                </div>
+                <h4 class="details" id="details-type"></h4>
+                <p class="details" id="details-notes"></p>
+                <a id="delete-entry" href="#id-timeline"">Delete</a>
+            </div>
+        </div>
+    </div>
+    <!-- /POPUP -->
+
+    <footer>
+        <span>CREATED BY <a href="https://github.com/dylanyng">DYLAN YOUNG</a></span>
+    </footer>
+    
+    <script src='js/main.js'></script>
+</body>
+</html>

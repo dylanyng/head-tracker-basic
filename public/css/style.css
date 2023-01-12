@@ -1,0 +1,326 @@
+/******************/
+/*  Main Styling  */
+/******************/
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color: #22211f;
+    
+}
+.nav-bar {
+    width: 912px;
+    margin: 20px auto;
+    
+}
+nav > img {
+    opacity: .7;
+}
+
+/* Universal Fonts */
+h1{
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF90;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+}
+h2,
+    h3 {
+        margin: 0;
+        color: #FFFFFF90;
+    }
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+h3 {
+    font-size: 35px;
+    margin: 0 0 5px 0;
+    font-weight: 400;
+}
+h4 {
+    font-size: 25px;
+    margin: 10px 0 5px 0;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+p {
+    font-size: 22px;
+    line-height: 150%;
+}
+span {
+    font-size: 15px;
+    color: #FFFFFF40;
+}
+
+/* Layout */
+.panel {
+    width: 912px;
+    margin: auto;
+}
+
+
+/******************/
+/*  Logger Panel  */
+/******************/
+.log-panel {
+    height: 450px;
+    margin-top: 25px;
+    display: flex;
+    flex-flow: column wrap;
+}
+/* Attack Type */
+.attack-type > div {
+    margin-top: 20px;
+}
+input[type="radio"] {
+    display: none;
+}
+label {
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    color: #555555;
+    width: 100px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+label[for="migraine"] {
+    background-color: #DE5516;
+    opacity: .6;
+    
+}
+label[for="headache"] {
+    background-color: #DE9221;
+    opacity: .6;
+
+}
+label[for="other"] {
+    background-color: #C8CB4A;
+    opacity: .6;
+
+}
+.radio-input:checked + label {
+    opacity: .8;
+    color: #FFFFFF;
+    border: #FFFFFF80 solid 2px;
+}
+
+.attack-type {
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 328px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.type-migraine {
+    accent-color: #DE5516;
+    color: #DE5516;
+}
+.type-headache {
+    accent-color: #DE9221;
+    color: #DE9221;
+}
+.type-other {
+    accent-color: #C8CB4A70;
+    color: #C8CB4A70;
+}
+
+/* Notes */
+textarea {
+    background: none;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF90;
+}
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #424141;
+}
+
+/* Date and Submit Buttons */
+#date-and-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+.date > input {
+    height: 39px;
+    width: 110px;
+    border-radius: 10px;
+    background-color: #B6B6B630;
+    color: #FFFFFF95;
+    font-size: 17px;
+    text-align: center;
+    border: none;
+    margin-right: 15px;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.submit-section > input {
+    height: 39px;
+    width: 100px; 
+    border-radius: 10px;
+    background-color: #4CFF3D73;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF99;
+}
+
+
+
+/******************/
+/* Overview Panel */
+/******************/
+.overview-panel {
+    height: 490px;
+    margin-top: 10px;
+}
+
+/* Timeline layout */
+.timeline {
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+    align-content: space-between;
+    width: 100%;
+    height: 350px;
+}
+
+/* Blocks in Timeline */
+.blocks {
+    aspect-ratio: 1/1;
+    margin-bottom: 25px;
+    width: 23px;
+    height: 23px;
+    border-radius: 20%;
+}
+.migraine-block {
+    background-color: #DE551695;
+}
+.headache-block {
+    background-color: #DE922195;
+}
+.other-block {
+    background-color: #ded82195;
+}
+.inActive-block {
+    /* background-color: #37DECD90; */
+    background-color: #B6B6B630;
+}
+
+
+/******************/
+/* Pop Up Windows */
+/******************/
+
+.popup {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    padding: 30px;
+    width: 950px;
+    left: 50%;
+    height: 500px;
+    top: 50%;
+    margin-top: -130px;
+    background: #2d2d2d;
+    z-index: 20;
+    transform: translate(-50%, 0);
+    color: #FFFFFF95;
+    border-radius: 10px;
+}
+
+.popup > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+div > span {
+    text-decoration: none;
+    color: #bb3b3b;
+    font-size: 60px;
+    font-family: 'Roboto';
+    margin: -25px 0 0 0;
+}
+
+div > span:hover {
+    color: #8f1d1d;
+    cursor: pointer;
+}
+    
+#popup2:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+  
+#popup2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.outterDiv {
+    overflow: hidden;
+}
+
+#delete-entry {
+    text-decoration: none;
+    color: #653d3d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top: auto;
+    width: 50px;
+    margin-left: auto;
+}
+
+#delete-entry:hover {
+    color: #dd0707;
+}
+
+
+/******************/
+/*     Footer     */
+/******************/
+footer {
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: #FFFFFF40;
+}
+footer a:hover {
+    color: #FFFFFF80;
+}
