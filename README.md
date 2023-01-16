@@ -25,17 +25,16 @@ Head Tracker is a beginner level application created for educational purposes. A
 
 ## Optimizations
 
-Todo:
-- Add the ability to edit past logs.
-- Disable the ability to submit a log for a day that has an existing log.
-- Add new log option for medications while distinguishing between common and less common medication types (abortives vs preventatives).
-- Make rows static to indicate day of the week.
+- [ ] Add the ability to edit past logs.
+- [ ] Disable the ability to submit a log for a day that has an existing log.
+- [ ] Add new log option for medications while distinguishing between common and less common medication types (abortives vs preventatives).
+- [ ] Make rows static to indicate day of the week.
 
 
 # Installation
 
 - `npm install` 
-- Create a `.env` file and add the following as `DB_STRING = <Connection string from your MongoDB database>`
+- Create a `.env` file and add the following as `DB_STRING = <connection string>`
 
 
 ## Lessons Learned:
