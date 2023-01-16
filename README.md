@@ -13,7 +13,7 @@ Head Tracker is an early iteration of a migraine and headache tracking web appli
 Head Tracker is a beginner level application created for educational purposes. A fully featured migraine tracker is currently in the planning phase. 
 
 
-# Packages/Dependencies used 
+## Packages/Dependencies used 
 
 - cors
 - dotenv
@@ -31,7 +31,7 @@ Head Tracker is a beginner level application created for educational purposes. A
 - [ ] Make rows static to indicate day of the week.
 
 
-# Installation
+## Installation
 
 - `npm install` 
 - Create a `.env` file and add the following as `DB_STRING = <connection string>`
