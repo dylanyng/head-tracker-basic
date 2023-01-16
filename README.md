@@ -1,21 +1,17 @@
-# Introduction
+# Head Tracker (basic)
+![Screenshot](https://github.com/dylanyng/head-tracker-basic/blob/main/screenshot.png)
 
-This version of Head Tracker is an early iteration of a migraine and headache tracking web application. 
+Head Tracker is an early iteration of a migraine and headache tracking web application. 
 
----
+**Link to project:** Demo coming soon...
 
 
-# Objectives
+## How It's Made:
 
-A beginner level application created to gain more experience with Express.js and to test some ideas I have for a full featured migraine tracker.
+**Tech used:** JavaScript, Express, MongoDB, EJS, CSS
 
----
+Head Tracker is a beginner level application created for educational purposes. A fully featured migraine tracker is currently in the planning phase. 
 
-# Who is this for? 
-
-It's for beginners and testers to help understand the various aspects of building a basic node application.
-
----
 
 # Packages/Dependencies used 
 
@@ -26,20 +22,22 @@ It's for beginners and testers to help understand the various aspects of buildin
 - helper-js
 - mongodb
 
----
 
-# Install all the dependencies or node packages used for development via Terminal
+## Optimizations
 
-`npm install` 
+Todo:
+- Add the ability to edit past logs.
+- Disable the ability to submit a log for a day that has an existing log.
+- Add new log option for medications while distinguishing between common and less common medication types (abortives vs preventatives).
+- Make rows static to indicate day of the week.
 
----
 
-# Things to add
+# Installation
 
+- `npm install` 
 - Create a `.env` file and add the following as `DB_STRING = <Connection string from your MongoDB database>`
 
----
 
-# Known issues
+## Lessons Learned:
 
-- Application allows for the submission of multiple records on the same date and will not indicate that a record already exists.
+- My template for basic applications needs updating. Better separation and organization is a must. Future applications will be built with MVC structure.
